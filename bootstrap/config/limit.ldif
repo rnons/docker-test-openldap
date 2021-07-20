@@ -1,0 +1,4 @@
+dn: olcDatabase={1}hdb, cn=config
+changetype: modify
+replace: olcSizeLimit
+olcSizeLimit: 10000

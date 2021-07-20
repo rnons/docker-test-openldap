@@ -61,6 +61,11 @@ configure_logging() {
     ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/logging.ldif -Q
 }
 
+configure_limit() {
+    echo "Configure limit..."
+    ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/limit.ldif -Q
+}
+
 configure_msad_features(){
   echo "Configure MS-AD Extensions"
   ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/msad.ldif -Q
@@ -102,6 +107,7 @@ slapd -h "ldapi:///" -u openldap -g openldap
 configure_msad_features
 configure_tls
 configure_logging
+configure_limit
 configure_memberof_overlay
 configure_admin_config_pw
 load_initial_data
