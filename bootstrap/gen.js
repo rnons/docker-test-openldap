@@ -26,7 +26,7 @@ async function main() {
 
   await Promise.all(
     Array.from({ length }).map((_, index) =>
-      fs.writeFile(`data/mock_fry${index}.ldif`, genMock(index))
+      fs.writeFile(`mock-data/mock_fry${index}.ldif`, genMock(index))
     )
   );
 }

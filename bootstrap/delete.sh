@@ -8,4 +8,4 @@ do
                "cn=Philip J. Fry$i,ou=people,dc=planetexpress,dc=com"
 done
 
-rm data/mock_fry*
+# rm mock-data/mock_fry*
